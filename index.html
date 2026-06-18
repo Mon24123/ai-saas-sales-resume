@@ -336,6 +336,38 @@
       font-size: 13px;
     }
 
+    .proof-gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 16px;
+    }
+
+    .proof-shot {
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      color: var(--brand-dark);
+      background: #f8fdfc;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .proof-shot img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .proof-shot span {
+      display: block;
+      padding: 8px 10px;
+    }
+
     .timeline {
       display: grid;
       gap: 16px;
@@ -453,9 +485,9 @@
     <div class="nav-inner">
       <div class="brand"><span class="brand-mark">AI</span>毛雨晴</div>
       <div class="nav-links">
-        <a href="#target">意向</a>
         <a href="#highlights">亮点</a>
-        <a href="#experience">经历</a>
+        <a href="#internships">实习</a>
+        <a href="#projects">项目</a>
         <a href="#skills">技能</a>
         <button class="print-btn" type="button" onclick="window.print()">打印 / 导出 PDF</button>
       </div>
@@ -468,7 +500,7 @@
         <div class="eyebrow">求职意向：TOB SaaS / AI 营销 / 企业服务销售</div>
         <h1>毛雨晴</h1>
         <p class="hero-subtitle">
-          2027 届自动化技术与应用本科。做过一年私域咨询和用户运营，也在 AI 公司做数据实习；目前想找更接近客户、收入结果和 AI 应用场景的实习机会。
+          2027 届自动化技术与应用本科。做过一年私域咨询和用户运营，也在 AI 公司做数据实习；求职意向为客户开发、软件销售、AI 营销应用相关实习。
         </p>
         <div class="proof-row" aria-label="关键成果">
           <span class="proof-chip"><strong>70W+</strong>用户运营累计 GMV</span>
@@ -494,33 +526,6 @@
       </aside>
     </header>
 
-    <section id="target">
-      <div class="section-head">
-        <h2>方向说明</h2>
-        <p class="section-note">意向是实习方向，不代表过往岗位名称。</p>
-      </div>
-      <div class="grid grid-2">
-        <article class="card">
-          <h3 class="card-title">已有经历</h3>
-          <p>过往主要是 C 端私域咨询和用户运营，做过线索承接、关系建立、需求判断、异议处理和成交跟进。希望把这套一线沟通经验迁移到企业级软件销售场景。</p>
-          <div class="tag-row">
-            <span class="tag">客户开发</span>
-            <span class="tag">需求沟通</span>
-            <span class="tag">长期跟进</span>
-          </div>
-        </article>
-        <article class="card">
-          <h3 class="card-title">想补的部分</h3>
-          <p>想系统学习企业客户开发、产品演示、方案沟通和商机推进；AI 方面更关注它在营销、销售和客服流程里怎么真正提升效率。</p>
-          <div class="tag-row">
-            <span class="tag">AI 工具</span>
-            <span class="tag">产品演示</span>
-            <span class="tag">商机推进</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
     <section id="highlights">
       <div class="section-head">
         <h2>可量化亮点</h2>
@@ -545,9 +550,9 @@
       </div>
     </section>
 
-    <section id="experience">
+    <section id="internships">
       <div class="section-head">
-        <h2>经历</h2>
+        <h2>实习经历</h2>
       </div>
       <div class="timeline">
         <article class="item">
@@ -562,6 +567,20 @@
               <li>旺季负责推课、维护、咨询全链路；淡季通过高频触达和用户分层筛选，持续寻找高意向用户。</li>
               <li>用 AI 辅助工作流：通义千问转写复盘，Gemini Gems 辅助用户回信、专业就业信息查询和咨询稿准备。</li>
             </ul>
+            <div class="proof-gallery" aria-label="用户运营证明材料">
+              <a class="proof-shot" href="february.png" target="_blank" rel="noopener">
+                <img src="february.png" alt="2 月全链路运营业绩排名截图">
+                <span>2 月业绩排名</span>
+              </a>
+              <a class="proof-shot" href="agent.png" target="_blank" rel="noopener">
+                <img src="agent.png" alt="8 个垂直场景 AI 智能体截图">
+                <span>8 个 AI 智能体</span>
+              </a>
+              <a class="proof-shot" href="chat.png" target="_blank" rel="noopener">
+                <img src="chat.png" alt="四维用户分层话术体系截图">
+                <span>用户分层话术</span>
+              </a>
+            </div>
           </div>
         </article>
 
@@ -573,12 +592,18 @@
           <div>
             <ul>
               <li>参与大模型回复质量评估与数据标注，判断模型回复中的前后矛盾、不合常理、格式错误和指令遵循问题。</li>
-              <li>接触 JSON、Markdown 等结构化格式，也会记录标注系统使用中的小问题并反馈优化建议。</li>
-              <li>这段经历让我更熟悉真实用户会怎样使用 AI，也更关注 AI 产品在具体工作场景里的体验。</li>
+              <li>接触 JSON、Markdown 等结构化格式，记录标注系统使用中的问题并反馈优化建议。</li>
             </ul>
           </div>
         </article>
+      </div>
+    </section>
 
+    <section id="projects">
+      <div class="section-head">
+        <h2>项目与作品</h2>
+      </div>
+      <div class="timeline">
         <article class="item">
           <div class="item-meta">
             <strong>Good Time 桌面时间记录工具</strong>
@@ -605,8 +630,11 @@
           <div>
             <ul>
               <li>小红书单篇最高浏览量 4.7W+，最高互动量 600+；公众号写作 100+ 篇，最高浏览量 7000+。</li>
-              <li>尝试过内容选题、私域承接、付费产品推荐、社群运营等小规模实践，对用户信任和表达方式比较敏感。</li>
+              <li>做过内容选题、私域承接、付费产品推荐和社群运营等小规模实践。</li>
             </ul>
+            <div class="tag-row">
+              <a class="tag" href="https://xhslink.com/m/DnZHFcwTKL" target="_blank" rel="noopener">小红书主页</a>
+            </div>
           </div>
         </article>
       </div>
