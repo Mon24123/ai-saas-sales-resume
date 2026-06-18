@@ -338,34 +338,48 @@
 
     .proof-gallery {
       display: grid;
-      grid-template-columns: 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       margin-top: 16px;
     }
 
     .proof-shot {
-      display: block;
+      display: flex;
+      flex-direction: column;
       overflow: hidden;
       border: 1px solid var(--line);
       border-radius: 12px;
       color: var(--brand-dark);
       background: #f8fdfc;
       text-decoration: none;
-      font-size: 13px;
-      font-weight: 760;
     }
 
     .proof-shot img {
       display: block;
       width: 100%;
-      height: auto;
+      height: 138px;
+      object-fit: cover;
+      object-position: top;
       border-bottom: 1px solid var(--line);
       background: var(--surface);
     }
 
-    .proof-shot span {
+    .proof-text {
+      padding: 10px 12px 12px;
+    }
+
+    .proof-title {
       display: block;
-      padding: 8px 10px;
+      margin-bottom: 4px;
+      font-size: 14px;
+      font-weight: 820;
+    }
+
+    .proof-desc {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.5;
     }
 
     .timeline {
@@ -416,6 +430,7 @@
       .grid-4,
       .grid-3,
       .grid-2,
+      .proof-gallery,
       .item {
         grid-template-columns: 1fr;
       }
@@ -570,15 +585,24 @@
             <div class="proof-gallery" aria-label="用户运营证明材料">
               <a class="proof-shot" href="february.png" target="_blank" rel="noopener">
                 <img src="february.png" alt="2 月全链路运营业绩排名截图">
-                <span>2 月业绩排名</span>
+                <span class="proof-text">
+                  <span class="proof-title">2 月全链路业绩排名</span>
+                  <span class="proof-desc">运营与咨询双线作业，当月总业绩位列团队前排。</span>
+                </span>
               </a>
               <a class="proof-shot" href="agent.png" target="_blank" rel="noopener">
                 <img src="agent.png" alt="8 个垂直场景 AI 智能体截图">
-                <span>8 个 AI 智能体</span>
+                <span class="proof-text">
+                  <span class="proof-title">8 个垂直场景 AI 智能体</span>
+                  <span class="proof-desc">覆盖回信、咨询准备、复盘等私域运营场景。</span>
+                </span>
               </a>
               <a class="proof-shot" href="chat.png" target="_blank" rel="noopener">
                 <img src="chat.png" alt="四维用户分层话术体系截图">
-                <span>用户分层话术</span>
+                <span class="proof-text">
+                  <span class="proof-title">四维用户分层话术体系</span>
+                  <span class="proof-desc">按年级、基础、投入度、目标拆分沟通策略。</span>
+                </span>
               </a>
             </div>
           </div>
