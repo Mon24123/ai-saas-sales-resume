@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>毛雨晴 | 智能营销顾问 / TOB SaaS 销售申请</title>
+  <style>
+    :root {
+      --bg: #f4fbfb;
+      --surface: #ffffff;
+      --surface-soft: #e9f8f6;
+      --text: #102f35;
+      --muted: #52676c;
+      --line: #c9e9e6;
+      --brand: #0aa89e;
+      --brand-dark: #087a78;
+      --blue: #1466b8;
+      --accent: #ff9f2f;
+      --shadow: 0 18px 50px rgba(8, 122, 120, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(10, 168, 158, 0.16), transparent 34rem),
+        linear-gradient(180deg, #fbffff 0%, var(--bg) 48%, #eef8f8 100%);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      font-size: 17px;
+      line-height: 1.68;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(244, 251, 251, 0.88);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(18px);
+    }
+
+    .wrap,
+    .nav-inner {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .nav-inner {
+      min-height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--brand-dark);
+      font-weight: 850;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      color: #fff;
+      background: linear-gradient(135deg, var(--brand), var(--blue));
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      flex: 0 0 auto;
+      text-decoration: none;
+      font-weight: 680;
+      white-space: nowrap;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand-dark);
+    }
+
+    .print-btn {
+      flex: 0 0 auto;
+      border: 0;
+      border-radius: 999px;
+      padding: 9px 15px;
+      color: #fff;
+      background: var(--brand);
+      font-weight: 760;
+      cursor: pointer;
+    }
+
+    .hero {
+      padding: 42px 0 28px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.12fr) 360px;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .hero-main,
+    .card,
+    .item {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, 0.9);
+      box-shadow: 0 12px 30px rgba(16, 47, 53, 0.06);
+    }
+
+    .hero-main {
+      padding: 30px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 12px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      color: var(--brand-dark);
+      background: var(--surface-soft);
+      font-size: 14px;
+      font-weight: 780;
+    }
+
+    h1 {
+      margin: 18px 0 10px;
+      color: var(--brand-dark);
+      font-size: clamp(34px, 4.1vw, 46px);
+      line-height: 1.12;
+    }
+
+    .hero-subtitle {
+      max-width: 760px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .proof-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .proof-chip {
+      display: inline-flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid #f4d09b;
+      border-radius: 12px;
+      color: #725016;
+      background: #fff8ed;
+      font-weight: 780;
+    }
+
+    .proof-chip strong {
+      color: var(--accent);
+      font-size: 23px;
+      line-height: 1;
+    }
+
+    .target-row,
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .target-row {
+      margin-top: 18px;
+    }
+
+    .target,
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      color: var(--brand-dark);
+      background: #f6fcfb;
+      font-weight: 760;
+    }
+
+    .target {
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 12px;
+    }
+
+    .target::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(255, 159, 47, 0.16);
+    }
+
+    .hero-card {
+      border-radius: 18px;
+      padding: 24px;
+      color: #fff;
+      background: linear-gradient(155deg, var(--brand-dark), var(--brand) 58%, var(--blue));
+      box-shadow: var(--shadow);
+    }
+
+    .name {
+      margin-bottom: 6px;
+      font-size: 32px;
+      font-weight: 880;
+    }
+
+    .role-note {
+      margin-bottom: 18px;
+      color: rgba(255, 255, 255, 0.84);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 10px;
+      font-size: 15px;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      display: block;
+      padding: 10px 12px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: rgba(255, 255, 255, 0.13);
+    }
+
+    section {
+      margin: 24px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 14px;
+    }
+
+    h2 {
+      margin: 0;
+      color: var(--brand-dark);
+      font-size: 26px;
+    }
+
+    .section-note {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-4 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .card {
+      padding: 22px;
+      border-radius: 14px;
+    }
+
+    .metric {
+      margin-bottom: 8px;
+      color: var(--brand);
+      font-size: 34px;
+      font-weight: 920;
+      line-height: 1.1;
+    }
+
+    .card-title {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 18px;
+      font-weight: 860;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      margin-top: 14px;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 13px;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 16px;
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 220px minmax(0, 1fr);
+      gap: 20px;
+      padding: 22px;
+      border-radius: 14px;
+    }
+
+    .item-meta {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .item-meta strong {
+      display: block;
+      margin-bottom: 5px;
+      color: var(--brand-dark);
+      font-size: 18px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--muted);
+    }
+
+    li + li {
+      margin-top: 8px;
+    }
+
+    .footer {
+      margin-top: 34px;
+      padding: 28px 0 40px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .grid-4,
+      .grid-3,
+      .grid-2,
+      .item {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 12px 0;
+      }
+
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 4px;
+      }
+    }
+
+    @media (max-width: 560px) {
+      body {
+        font-size: 16px;
+      }
+
+      .wrap,
+      .nav-inner {
+        width: min(100% - 24px, 1120px);
+      }
+
+      .hero-main,
+      .hero-card,
+      .card,
+      .item {
+        padding: 18px;
+      }
+
+      .section-head {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media print {
+      .nav,
+      .print-btn {
+        display: none;
+      }
+
+      body {
+        background: #fff;
+        font-size: 13px;
+      }
+
+      .wrap {
+        width: 100%;
+      }
+
+      .card,
+      .item,
+      .hero-main,
+      .hero-card {
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="brand-mark">AI</span>毛雨晴 · TOB SaaS 销售申请</div>
+      <div class="nav-links">
+        <a href="#target">方向</a>
+        <a href="#highlights">亮点</a>
+        <a href="#experience">经历</a>
+        <a href="#skills">技能</a>
+        <button class="print-btn" type="button" onclick="window.print()">打印 / 导出 PDF</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="wrap">
+    <header class="hero">
+      <div class="hero-main">
+        <div class="eyebrow">智能营销顾问 · TOB SaaS 软件销售 · AI + 数字化企业服务</div>
+        <h1>毛雨晴</h1>
+        <p class="hero-subtitle">
+          2027 届自动化技术与应用本科。做过一年私域咨询和用户运营，也在 AI 公司做数据实习；想进入离客户和结果更近的岗位，学习企业级软件销售和 AI 营销场景。
+        </p>
+        <div class="proof-row" aria-label="关键成果">
+          <span class="proof-chip"><strong>70W+</strong>用户运营累计 GMV</span>
+          <span class="proof-chip"><strong>180</strong>名付费用户转化</span>
+          <span class="proof-chip"><strong>8</strong>个 AI 智能体提效实践</span>
+        </div>
+        <div class="target-row" aria-label="申请方向">
+          <span class="target">智能营销顾问</span>
+          <span class="target">TOB SaaS 软件销售</span>
+          <span class="target">AI 企业服务</span>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <div class="name">毛雨晴</div>
+        <div class="role-note">南京工业职业技术大学 · 2027 届 · 自动化技术与应用</div>
+        <div class="contact-list">
+          <span>电话：198-2260-9828</span>
+          <a href="mailto:maoyuqing2027@163.com">邮箱：maoyuqing2027@163.com</a>
+          <a href="https://github.com/Mon24123" target="_blank" rel="noopener">GitHub：Mon24123</a>
+          <span>CET-4 577 / CET-6 472 / MS 计算机二级</span>
+        </div>
+      </aside>
+    </header>
+
+    <section id="target">
+      <div class="section-head">
+        <h2>申请方向</h2>
+        <p class="section-note">对 TOB 软件销售感兴趣，也愿意从培训和一线客户开发做起。</p>
+      </div>
+      <div class="grid grid-2">
+        <article class="card">
+          <h3 class="card-title">为什么看这个方向</h3>
+          <p>我之前做的是面向 C 端的咨询转化，但真正喜欢的是需求判断、关系建立、跟进成交这部分。TOB SaaS 更接近企业真实经营问题，也更适合长期积累行业和客户资源。</p>
+          <div class="tag-row">
+            <span class="tag">客户开发</span>
+            <span class="tag">需求沟通</span>
+            <span class="tag">长期跟进</span>
+          </div>
+        </article>
+        <article class="card">
+          <h3 class="card-title">和 AI 营销的交集</h3>
+          <p>我日常高频使用 AI，也在实习中把 AI 用到话术、复盘、专业信息查询和工作流提效里。相比“概念上懂 AI”，我更关心它怎么帮销售和运营少做重复劳动。</p>
+          <div class="tag-row">
+            <span class="tag">AI 工具</span>
+            <span class="tag">营销提效</span>
+            <span class="tag">流程意识</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="highlights">
+      <div class="section-head">
+        <h2>可量化亮点</h2>
+      </div>
+      <div class="grid grid-4">
+        <article class="card">
+          <div class="metric">70W+</div>
+          <p>12 个月私域运营与咨询累计 GMV，客单价约 3880-4080 元。</p>
+        </article>
+        <article class="card">
+          <div class="metric">180</div>
+          <p>累计转化付费用户，经历推课、维护、咨询、促单完整流程。</p>
+        </article>
+        <article class="card">
+          <div class="metric">Top 10%</div>
+          <p>60+ 人团队中业绩长期靠前，多次拿到日销冠、轮次销冠。</p>
+        </article>
+        <article class="card">
+          <div class="metric">1000+</div>
+          <p>淡季单日可触达用户量，能在低质量线索里快速筛选机会。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <h2>经历</h2>
+      </div>
+      <div class="timeline">
+        <article class="item">
+          <div class="item-meta">
+            <strong>杭州浙才学子教育咨询服务有限公司</strong>
+            私域运营 / 私域咨询实习生<br>2025.04 - 2026.04
+          </div>
+          <div>
+            <ul>
+              <li>使用学姐 IP 承接流量线索，通过经验分享、学习规划沟通和直播课引导，完成长期班转化。</li>
+              <li>累计转化约 180 名付费用户，累计 GMV 70W+；高峰期单周成交 9 单，曾拿日销冠、轮次销冠。</li>
+              <li>旺季负责推课、维护、咨询全链路；淡季通过高频触达和用户分层筛选，持续寻找高意向用户。</li>
+              <li>用 AI 辅助工作流：通义千问转写复盘，Gemini Gems 辅助用户回信、专业就业信息查询和咨询稿准备。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item-meta">
+            <strong>北京智谱华章科技股份有限公司</strong>
+            AI 数据实习生<br>2026.05 - 至今
+          </div>
+          <div>
+            <ul>
+              <li>参与大模型回复质量评估与数据标注，判断模型回复中的前后矛盾、不合常理、格式错误和指令遵循问题。</li>
+              <li>接触 JSON、Markdown 等结构化格式，也会记录标注系统使用中的小问题并反馈优化建议。</li>
+              <li>这段经历让我更熟悉真实用户会怎样使用 AI，也更关注 AI 产品在具体工作场景里的体验。</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item-meta">
+            <strong>Good Time 桌面时间记录工具</strong>
+            个人产品项目<br>2026.05 - 2026.06
+          </div>
+          <div>
+            <ul>
+              <li>从“记录任务耗时太麻烦”的个人痛点出发，借助 AI 协作完成 Electron 桌面应用。</li>
+              <li>产品包含悬浮小面板、统计面板、任务池、分类统计、时间线记录、CSV 导出和本地备份。</li>
+              <li>发布 Mac / Windows 版本，并根据朋友反馈修复 Windows 打不开、小面板卡顿、暂停统计不准等问题。</li>
+            </ul>
+            <div class="tag-row">
+              <a class="tag" href="https://github.com/Mon24123/good-time" target="_blank" rel="noopener">GitHub 仓库</a>
+              <a class="tag" href="https://github.com/Mon24123/good-time/releases/tag/v0.2.2" target="_blank" rel="noopener">Release 下载</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="item">
+          <div class="item-meta">
+            <strong>内容创作与私域实践</strong>
+            个人长期实践<br>2023.10 - 至今
+          </div>
+          <div>
+            <ul>
+              <li>小红书单篇最高浏览量 4.7W+，最高互动量 600+；公众号写作 100+ 篇，最高浏览量 7000+。</li>
+              <li>尝试过内容选题、私域承接、付费产品推荐、社群运营等小规模实践，对用户信任和表达方式比较敏感。</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-head">
+        <h2>技能</h2>
+      </div>
+      <div class="grid grid-3">
+        <article class="card">
+          <h3 class="card-title">销售与运营</h3>
+          <p>私域承接、用户分层、触达话术、规划咨询、异议处理、转化跟进、复盘 SOP。</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">AI 与工具</h3>
+          <p>GPT、Gemini、通义千问、Codex、AI 数据标注、AI Agent、Markdown / JSON、飞书多维表格。</p>
+        </article>
+        <article class="card">
+          <h3 class="card-title">表达与交付</h3>
+          <p>长文写作、内容选题、信息整理、用户沟通、Canva、剪映、Obsidian、基础 Python / SQL。</p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>教育背景</h2>
+      </div>
+      <div class="card">
+        <h3 class="card-title">南京工业职业技术大学 · 自动化技术与应用专业（本科）</h3>
+        <p>2023.09 - 2027.06；连续两年获得学业奖学金；CET-4 577，CET-6 472；MS 计算机二级。</p>
+      </div>
+    </section>
+
+    <footer class="footer">
+      毛雨晴 · 智能营销顾问 / TOB SaaS 软件销售申请 · 最后更新 2026.06.18
+    </footer>
+  </main>
+</body>
+</html>
